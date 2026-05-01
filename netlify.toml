@@ -1,0 +1,30 @@
+# ─────────────────────────────────────────────
+# Netlify configuration for embedg-app
+# Place this file at: embedg-app/netlify.toml
+# ─────────────────────────────────────────────
+
+[build]
+  # The frontend lives in the embedg-app sub-directory
+  base    = "embedg-app"
+  command = "npm run build"
+  # Vite outputs to dist/
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA fallback — all routes must resolve to index.html
+# (React Router handles the actual routing client-side)
+[[redirects]]
+  from   = "/*"
+  to     = "/app/index.html"
+  status = 200
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options        = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy        = "strict-origin-when-cross-origin"
+    Permissions-Policy     = "camera=(), microphone=(), geolocation=()"
