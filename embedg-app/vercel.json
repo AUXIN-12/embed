@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "http://YOUR-PANEL-IP:YOUR-PANEL-PORT/api/:path*"
+      "destination": "http://pat.hidencloud.com:24739/api/:path*"
     },
     {
       "source": "/e/:path*",
