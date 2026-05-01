@@ -6,11 +6,11 @@
     },
     {
       "source": "/e/:path*",
-      "destination": "http://YOUR-PANEL-IP:YOUR-PANEL-PORT/e/:path*"
+      "destination": "http://pat.hidencloud.com:24739/e/:path*"
     },
     {
       "source": "/cdn/:path*",
-      "destination": "http://YOUR-PANEL-IP:YOUR-PANEL-PORT/cdn/:path*"
+      "destination": "http://pat.hidencloud.com:24739/cdn/:path*"
     },
     {
       "source": "/app/:path*",
